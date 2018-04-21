@@ -1,0 +1,36 @@
+===========
+  MiniCAD
+===========
+
+
+  CAD (Computer-Aided Design or Computer-Aided Design) is the use of technology to create designs
+(generally 2D) and replaces the manual drawing process of a piece with an automated one. One of
+the most popular such programs is AutoCAD. Such programs improve the designer's design quality
+and productivity.
+  Based on the initial data and input set instructions, it will produce a PNG file representing
+the final image at the end of the command execution.
+
+# Input data
+  The name of the input file from which it is read is received as a program argument. The input
+files will have the following structure:
+  On the first line there will be a natural number N representing the total number of shapes to
+be drawn in the drawing. The following N lines will contain information about each of N forms: the
+position of a shape, its dimensions, and its color. The colors you'll need to use will be rendered in
+the format: "#RGB A", where R, G, and B represent the red, green and blue pixels in hex (256 possible
+values: 00, 01, 02, ... , 09, 0A, 0B, ..., 0F, 10, 11, ..., FE, FF), and A is the decimal value of Alpha
+(opacity), taking values from 0 to 100.
+
+  Of course, each form is different, so it will have a different format. The possibilities are as follows:
+    ->  CANVAS <hight> <length> #RGB A
+    ->  LINE <x start coordinate> <y start coordinate> <x finish coordinate> <y finish coordinate> #RGB A
+    ->  SQUARE <the x coordinate of the top left corner> <the x coordinate of the top left corner> <length> #RGB A #RGB A
+    ->  RECTANGLE <the x coordinate of the top left corner> <the y coordinate of the top left corner> <hight> <length> #RGB A #RGB A
+    ->  CIRCLE <the x coordinate of the center> <the y coordinate of the center> <radius> #RGB A #RGB A 
+    ->  TRIANGLE <the x coordinate of the first point> <the y coordinate of the first point>
+                 <the x coordinate of the second point> <the y coordinate of the second point>
+                 <the x coordinate of the third point> <the y coordinate of the third point> #RGB A #RGB A
+    ->  DIAMOND <the x coordinate of the center> <the y coordinate of the center>
+                <length of the horizontal diagonal> <length of the vertical diagonal> #RGB A #RGB A
+    ->  POLYGON <number of vertices> <the x coordinate of a point> <the y coordinate of a point> #RGB A #RGB A
+                  
+# Note: I attached 2 input files cat.in, owl.in which will generate a PNG file for each input.
